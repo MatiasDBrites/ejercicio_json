@@ -102,7 +102,7 @@ c(user[0].name);
 let datosPrincipales ="";
 
 user.forEach(e => {
-  datosPrincipales = datosPrincipales + `<h3>${e.name}</h3><br><li><span>Email:</span>${e.email}</li><li><span>Cuidad: </span>${e.address.city}</li><li><span>Phone:</span>${e.phone}</li><br><br>`
+  datosPrincipales = datosPrincipales + `<h3>${e.name}</h3><br><li><span>Email: </span>${e.email}</li><li><span>Cuidad: </span>${e.address.city}</li><li><span>Phone: </span>${e.phone}</li><br><br>`
 });
 
 document.getElementById("lista").innerHTML = datosPrincipales
