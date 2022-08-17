@@ -1,5 +1,7 @@
 let c = console.log;
 
+const $container = document.getElementById("container__tarjetas");
+
 const json = `[
   {
     "id": 1,
@@ -94,15 +96,21 @@ const json = `[
     }
   }
 ]
-`
+`;
 const user = JSON.parse(json);
 
-c(user[0].name);
-
-let datosPrincipales ="";
-
-user.forEach(e => {
-  datosPrincipales = datosPrincipales + `<h3>${e.name}</h3><br><li><span>Email: </span>${e.email}</li><li><span>Cuidad: </span>${e.address.city}</li><li><span>Phone: </span>${e.phone}</li><br><br>`
+user.forEach((e) => {
+  $container.innerHTML += `
+  <div class="tarjeta">
+    <div class="tarjeta__parrafo">
+      <h3 class="tarjeta__titulo">${e.name}
+      </h3>
+      <p class="tarjeta_texto">${e.email}</p>
+      <p class="tarjeta_texto">${e.adress}</p>
+      <p class="tarjeta_texto">${e.phone}</p>
+    </div>
+  </div>
+  `;
 });
 
-document.getElementById("lista").innerHTML = datosPrincipales
+c(user);
