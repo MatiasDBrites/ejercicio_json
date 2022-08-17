@@ -27,7 +27,7 @@ body {
 }
 
 .tarjeta {
-  box-shadow: 0 0.4rem 0.5rem o rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   width: 20rem;
   text-align: center;
   overflow: hidden;
