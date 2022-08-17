@@ -11,8 +11,6 @@ body {
 }
 
 .container {
-  background-color: gray;
-  background-image:  linear-gradient(to right, #ff8008, #ffc837); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -20,18 +18,29 @@ body {
   align-items: center;
 }
 
-ul {
-  min-width: 40%;
-  max-width: 70%;
-  background-color: whitesmoke;
+.container__tarjetas {
   display: flex;
-  border-radius: 10px;
   flex-direction: column;
-  box-shadow: 0 0 1.5rem #ddd6d6;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  color: rgb(250, 126, 10);
-  border-width: 5px;
-  border-color: solid white;
+  gap: 3rem;
+  width: 50vw;
+  padding: 2.5rem 0;
+}
+
+.tarjeta {
+  box-shadow: 0 0.4rem 0.5rem o rgba(0, 0, 0, 0.2);
+  width: 20rem;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  background-color: whitesmoke;
+  background-image:  linear-gradient(to right, #ff8008, #ffc837); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
+}
+
+.tarjeta__parrafo {
+  padding: 1rem;
 }
